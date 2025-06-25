@@ -1,0 +1,653 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+
+.atm{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+
+    .money{
+
+        position: absolute;
+        top:75vh;
+        left:33vw;
+        width: 25vw;
+        height: 32vh;
+        transform: rotateZ(15.9deg);
+        visibility: hidden;
+        z-index: 110;
+        animation-fill-mode:forwards;
+        
+    }
+
+    .dadosUsuario {
+
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        justify-content:space-around;
+        padding-left: 1vw;
+        position: absolute;
+        width: 15vw;
+        height: 10vh;
+        background-color: rgb(109, 205, 230);
+        border-radius: 20px;
+        color: white;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bold;
+        right: 5vw;
+        top: 5vh;
+        visibility: hidden;
+    }
+
+    .loading {
+
+        position: absolute;
+        visibility: hidden;
+        /* background-color: #e79e00; */
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+
+        svg circle {
+            stroke-dasharray: 314;
+            transform-origin: center center;
+            animation: loading 2s linear infinite;
+        }   
+
+    }
+
+        
+
+    .cadastro {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 30vw;
+        height: 50vh;
+        border-radius: 10%;
+        background-color: rgb(156, 0, 0);
+        opacity: 95%;
+        visibility: visible;
+
+        .form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            text-align: center;
+            width: 100vw;
+            height: 40vh;
+            color:white;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            /* background-color: aquamarine; */
+
+            h1{
+                width: 100vw;
+                border-radius: 20px;
+                background-color: #e79e00;
+            }
+
+            #input{
+                width: 25vw;
+                height: 5vh;
+                border-radius: 20px;
+                border-style: none;
+                outline: none;
+                text-align: center;
+                text-transform: uppercase;
+            }
+
+            .button{
+                width: 10vw;
+                height: 3vh;
+                border-radius: 20px;
+                border-style: none;
+                cursor: pointer;
+                color:white;
+                background-color: rgb(255, 0, 0);
+                transition: 300ms;
+            }
+
+            .button:hover{
+                background-color: #e79e00;
+                transform:scale(110%);
+            }
+        }
+    }
+
+    .img{
+        position: absolute;
+        width: 50vw;
+        height: 90vh;
+        visibility: hidden;
+
+        .telaAtm{
+            display: flex;
+            position: absolute;
+            z-index: 2;
+            width: 37vw;
+            height: 36vh;
+            top: 27vh;
+            left: 6.5vw;
+            align-items: center;
+            justify-content: center;
+            /* background-color: #CE232B; */
+
+            .botaoLateral1{
+                position: absolute;
+                /* background-color: blueviolet; */
+                width: 3.4vw;
+                height: 3vh;
+                top: 18.5vh;
+                left: 0.5vw;
+                cursor: pointer;
+            }
+
+            .botaoLateral2{
+                position: absolute;
+                /* background-color: blueviolet; */
+                width: 3.4vw;
+                height: 3vh;
+                top: 23.8vh;
+                left: 0.4vw;
+                cursor: pointer;
+            }
+
+            .botaoLateral3{
+                position: absolute;
+                /* background-color: blueviolet; */
+                width: 3.4vw;
+                height: 3vh;
+                top: 29vh;
+                left: 0.3vw;
+                cursor: pointer;
+            }
+
+            .botaoLateral4{
+                position: absolute;
+                /* background-color: blueviolet; */
+                width: 3.5vw;
+                height: 3vh;
+                top: 18.5vh;
+                right: 0.45vw;
+                cursor: pointer;
+            }
+
+            .botaoLateral5{
+                position: absolute;
+                /* background-color: blueviolet; */
+                width: 3.5vw;
+                height: 3vh;
+                top: 23.8vh;
+                right: 0.35vw;
+                cursor: pointer;
+            }
+
+            .botaoLateral6{
+                position: absolute;
+                /* background-color: blueviolet; */
+                width: 3.4vw;
+                height: 3vh;
+                top: 29vh;
+                right: 0.3vw;
+                cursor: pointer;
+                visibility: visible;
+            }
+
+            .botao_voltar_click{
+                position: absolute;
+                /* background-color: blueviolet; */
+                width: 3.4vw;
+                height: 3vh;
+                top: 28.3vh;
+                right: 0.5vw;
+                cursor: pointer;
+                visibility: hidden;
+            }
+
+            .tela{
+                display: flex;
+                width: 27.8vw;
+                height: 35vh;
+                position: absolute;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                color: white;
+                background-color: black;
+                visibility: hidden;             
+                
+            }
+
+            .tela_dados{
+                position: absolute;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 27.5vw;
+                height: 36vh;
+                background-color: black;
+                visibility: hidden;
+
+                .dados{
+                    position: absolute;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    background-color: #F2F3D4;
+                    color: black;
+                    font-size: smaller;
+                    top:2vh;
+                    width: 24vw;
+                    height: 25vh;
+
+                    .info{
+                        margin-top: 1vh;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: space-between;
+                        width: 20vw;
+                        height: 15vh;
+                        text-align: center;
+
+                        .titulo_info{
+                            position: absolute;
+                            top: 6.9vh;
+                        }
+
+                        .valor{
+                            position: absolute;
+                            top: 18.5vh;
+                            left: 5vw;
+                        }
+
+                        .valor_n{
+                            position: absolute;
+                            top: 18.5vh;
+                            right: 5vw;
+                        }
+
+                        .a_valor{
+                            position: absolute;
+                            top: 18.5vh;
+                            right: 3.7vw;
+                        }
+                    }
+
+                    .elementTransacao {
+                        
+                        position: absolute;
+                        top: 8vh;
+                        width: 18vw;
+                        height: 10.5vh;
+                        text-align: right;
+                        padding-top: 2%;
+                        padding-bottom: 2%;
+                    }
+
+                    .dados_atm{
+                        display: flex;
+                        position: absolute;
+                        justify-content: space-around;
+                        top: 22vh;
+                        height: 2vh;
+                        width: 18vw;
+                    }
+
+                    .tela_servicoIndisponivel{
+                        display: flex;
+                        width: 27.3vw;
+                        height: 35vh;
+                        position: absolute;
+                        align-items: center;
+                        justify-content: center;
+                        text-align: center;
+                        color: white;
+                        background-color: black;
+                        visibility: visible;             
+                        
+                    }
+                }
+
+                .botao_voltar{
+                    position: absolute;
+                    background-color:#CE232B;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    position: absolute;
+                    width: 10vw;
+                    height: 3vh;
+                    top: 29.2vh;
+                    border-radius: 5em;
+                    color: white;
+                    left: 17.3vw;
+                }
+                
+            }
+
+            .pelicula_tela{
+                position: absolute;
+                z-index: 3;
+                width: 27.8vw;
+                height: 35vh;
+                /* background-color: aqua; */
+            }
+
+            .menu{
+                display: flex;
+                justify-content: center;
+                width: 27.5vw;
+                height: 36vh;
+                visibility: hidden;
+                background-color: black;
+                color: white;
+
+                .texto_menu{
+                    margin-top: 10vh;
+                }
+
+                .opcao[value="1"],[value="2"],[value="3"],[value="4"],[value="5"],[value="6"]{
+                    background-color:#CE232B;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    position: absolute;
+                    width: 10vw;
+                    height: 3vh;
+                    left: 22vw;
+                    border-radius: 5em;
+                    color: white;
+                }
+
+                .opcao[value="1"]{
+                    top: 18.7vh;
+                    left: 5vw;
+                }
+
+                .opcao[value="2"]{
+                    top: 24vh;
+                    left: 5vw;
+                }
+
+                .opcao[value="3"]{
+                    top: 29.2vh;
+                    left: 5vw;
+                }
+
+                .opcao[value="4"]{
+                    top: 18.7vh;
+                    right: 5.5vw;
+                }
+
+                .opcao[value="5"]{
+                    top: 24vh;
+                    right: 5.5vw;
+                }
+
+                .opcao[value="6"]{
+                    top: 29.2vh;
+                    right: 5.5vw;
+                }
+            }            
+        }
+
+        img{
+            position: relative;
+            height: 90vh;
+            width: 50vw;
+            z-index: 1;
+        }
+
+        .teclado_numerico{
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            width: 14vw;
+            height: 7vh;
+            bottom: 15.2vh;
+            left: 18vw;
+            /* background-color: black; */
+            opacity: 80%;
+            z-index: 2;
+
+            .botao1{
+                position: absolute;
+                left: 1vw;
+                /* background-color: blue; */
+                width: 2.3vw;
+                height: 1.2vh;
+                cursor: pointer;
+                color: white;
+                font-size: 0.5rem;
+                font-weight: 600;
+                text-align: center;
+
+            }
+
+            .botao2{
+                position: absolute;
+                left: 3.65vw;
+                /* background-color: yellow; */
+                width: 2.65vw;
+                height: 1.5vh;
+                cursor: pointer;
+                color: white;
+                font-size: 0.5rem;
+                font-weight: 600;
+                text-align: center;
+
+            }
+
+            .botao3{
+                position: absolute;
+                left: 6.5vw;
+                /* background-color: blue; */
+                width: 2.5vw;
+                height: 1.2vh;
+                cursor: pointer;
+                color: white;
+                font-size: 0.5rem;
+                font-weight: 600;
+                text-align: center;
+
+            }
+
+            .botao4{
+                position: absolute;
+                left: 0.8vw;
+                /* background-color: blue; */
+                width: 2.5vw;
+                height: 1.5vh;
+                top: 1.8vh;
+                transform: skewX(-7deg);
+                cursor: pointer;
+                color: white;
+                font-size: 0.5rem;
+                font-weight: 600;
+                text-align: center;
+
+            }
+
+            .botao5{
+                position: absolute;
+                left: 3.6vw;
+                /* background-color: yellow; */
+                width: 2.70vw;
+                height: 1.4vh;
+                top: 1.8vh;
+                cursor: pointer;
+                color: white;
+                font-size: 0.5rem;
+                font-weight: 600;
+                text-align: center;
+
+            }
+
+            .botao6{
+                position: absolute;
+                right: 5vw;
+                /* background-color: blue; */
+                width: 2.5vw;
+                height: 1.2vh;
+                top: 1.8vh;
+                transform: skewX(2deg);
+                cursor: pointer;
+                color: white;
+                font-size: 0.5rem;
+                font-weight: 600;
+                text-align: center;
+
+            }
+
+            .botao7{
+                position: absolute;
+                left: 0.7vw;
+                /* background-color: blue; */
+                width: 2.5vw;
+                height: 1.5vh;
+                top: 3.55vh;
+                transform: skewX(-7deg);
+                cursor: pointer;
+                color: white;
+                font-size: 0.5rem;
+                font-weight: 600;
+                text-align: center;
+
+            }
+
+            .botao8{
+                position: absolute;
+                left: 3.5vw;
+                /* background-color: yellow; */
+                width: 2.70vw;
+                height: 1.4vh;
+                top: 3.75vh;
+                cursor: pointer;
+                color: white;
+                font-size: 0.5rem;
+                font-weight: 600;
+                text-align: center;
+
+            }
+
+            .botao9{
+                position: absolute;
+                right: 5vw;
+                /* background-color: blue; */
+                width: 2.5vw;
+                height: 1.5vh;
+                top: 3.55vh;
+                transform: skewX(2deg);
+                cursor: pointer;
+                color: white;
+                font-size: 0.5rem;
+                font-weight: 600;
+                text-align: center;
+
+            }
+
+            .botao0{
+                position: absolute;
+                left: 3.4vw;
+                /* background-color: blue; */
+                width: 2.8vw;
+                height: 1.4vh;
+                top: 5.5vh;
+                cursor: pointer;
+                color: white;
+                font-size: 0.5rem;
+                font-weight: 600;
+                text-align: center;
+
+            }
+
+            .botaoanula{
+                position: absolute;
+                right: 0.4vw;
+                /* background-color: blue; */
+                width: 2.5vw;
+                height: 1.6vh;
+                transform: skewX(7deg);
+                cursor: pointer;
+                color: white;
+                font-size: 0.4rem;
+                font-weight: 600;
+                text-align: center;
+            }
+
+            .botaoentra{
+                position: absolute;
+                display: flex;
+                right: 0.25vw;
+                /* background-color: yellow; */
+                width: 2.6vw;
+                height: 1.7vh;
+                top: 1.76vh;
+                transform: skewX(7deg);
+                cursor: pointer;
+                color: white;
+                font-size: 0.4rem;
+                font-weight: 600;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .botaocorrige{
+                position: absolute;
+                display: flex;
+                right: 0vw;
+                /* background-color: blue; */
+                width: 2.6vw;
+                height: 1.7vh;
+                top: 5.2vh;
+                transform: skewX(7deg);
+                cursor: pointer;
+                color: white;
+                font-size: 0.4rem;
+                font-weight: 600;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+
+
+    }
+    
+}
+
+@keyframes loading {
+    0% {
+        stroke-dashoffset: 628;
+        transform: rotate(-360deg);
+    }
+
+    100% {
+        stroke-dashoffset: 0;
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes money {
+    0% {
+        top: 77vh;
+        opacity: 0%;
+    }
+
+    100% {
+        top: 77.5vh;
+        opacity: 100%;
+    }
+}

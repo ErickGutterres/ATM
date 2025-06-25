@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/assets/styles/style.css">
+    <title>ATM</title>
+  
+</head>
+<body>
+    
+    <div class="atm">
+        <img src="./src/assets/images/background.jpg" alt="Background">
+        <img src="./src/assets/images/money.png" alt="money" class="money">
+
+        <div class="dadosUsuario"><span>NOME: </span><span>CONTA: </span>
+        </div>
+        
+        <div class="cadastro">
+            <div class="form">
+                <h1>ATM</h1>
+                <h3>DIGITE SEU NOME PARA <br>A CRIAÇÃO DE UMA<br>CONTA DE TESTE PARA<br>TESTAR O ATM.</h3>
+                <input type="text" placeholder="DIGITE SEU NOME" id="input" autocomplete="off"></input>
+                <input type="submit" value="IR" class="button">
+            </div>
+        </div>
+
+        <div class="img">
+            <img src="./src/assets/images/atm.png" alt="atm">
+
+            <div class="telaAtm">
+
+                <div class="botaoLateral1" data-botao></div>
+                <div class="botaoLateral2" data-botao></div>
+                <div class="botaoLateral3" data-botao></div>
+                <div class="botaoLateral4" data-botao></div>
+                <div class="botaoLateral5" data-botao></div>
+                <div class="botaoLateral6" data-botao></div>
+                <div class="botao_voltar_click" data-botao></div>
+
+                <div class="tela">
+                  <span>ATM<br>Clique na tecla "Entra" iniciar</span>
+                </div>
+
+                <div class="pelicula_tela"></div>
+
+                <!-- TELA INICIAL -->
+
+                <div class="menu">
+                    <span class="texto_menu">Escolha uma das opções abaixo:</span>
+                    <div class="opcao" value="1"><span>SALDO</span></div>
+                    <div class="opcao" value="2"><span>DEPOSITO</span></div>
+                    <div class="opcao" value="3"><span>EXTRATO</span></div>
+                    <div class="opcao" value="4"><span>SAQUE</span></div>
+                    <div class="opcao" value="5"><span>PAGAMENTOS</span></div>
+                    <div class="opcao" value="6"><span>SERVIÇOS</span></div>
+
+                    <div class="tela_dados">
+
+                        <div class="dados">
+
+                            <span class="titulo">ATM</span>
+                            <span class="data"></span>
+                            <span class="hora"></span>
+
+                        </div>
+
+                        <div class="botao_voltar"><span>VOLTAR</span></div>
+                    </div>
+                </div>
+
+                
+
+            </div>
+
+            <div class="teclado_numerico">
+                <div class="botao1" data-botao>1</div>
+                <div class="botao2" data-botao>2</div>
+                <div class="botao3" data-botao>3</div>
+                <div class="botao4" data-botao>4</div>
+                <div class="botao5" data-botao>5</div>
+                <div class="botao6" data-botao>6</div>
+                <div class="botao7" data-botao>7</div>
+                <div class="botao8" data-botao>8</div>
+                <div class="botao9" data-botao>9</div>
+                <div class="botao0" data-botao>0</div>
+                <div class="botaoentra" data-botao>ENTRA</div>
+                <div class="botaoanula" data-botao>ANULA</div>
+                <div class="botaocorrige" data-botao>CORRIGE</div>
+            </div>
+
+        </div>
+    </div>
+
+    <script type="module" src="./app.js"></script>
+</body>
+</html>
