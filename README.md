@@ -1,2 +1,2 @@
-# Projetos_pessoais
-Repositório dedicado aos meus projetos pessoais de estudos.
+# ATM
+Repositório dedicado ao projeto de um simulador de um ATM feito com HTML e JavaScript.
